@@ -11,7 +11,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateCorrectAnswer }) {
 
   function handleDelete() {
     const id = question.id;
-    fetch(`http://localhost:4000/questions/${id}`, {
+    fetch(`http://localhost:3000/questions/${id}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -24,7 +24,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateCorrectAnswer }) {
   function handleSelectChange(event) {
     const newCorrectIndex = parseInt(event.target.value);
 
-    fetch(`http://localhost:4000/questions/${id}`, {
+    fetch(`http://localhost:3000/questions/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -41,7 +41,7 @@ function QuestionForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    fetch("http://localhost:4000/questions", {
+    fetch("http://localhost:3000/questions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function QuestionForm() {
     })
       .then((response) => response.json())
       .then((newQuestion) => {
-        // Handle the new question
+        
       });
   }
 
